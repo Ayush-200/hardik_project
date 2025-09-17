@@ -12,7 +12,7 @@ const AnalyticsModal = ({ analytics: initialAnalytics, onClose }) => {
         
         setLoadingRating(true);
         const ratingResponse = await fetch(
-          "https://civicconnect-backend.onrender.com/api/sector-head/average-rating",
+          "https://hardik-project-backend-n2av.onrender.com/api/sector-head/average-rating",
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -35,7 +35,7 @@ const AnalyticsModal = ({ analytics: initialAnalytics, onClose }) => {
 
         setLoadingTotalIssues(true);
         const analyticsResponse = await fetch(
-          "https://civicconnect-backend.onrender.com/api/sector-head/analytics",
+          "https://hardik-project-backend-n2av.onrender.com/api/sector-head/analytics",
           {
             headers: {
               Authorization: `Bearer ${token}`
