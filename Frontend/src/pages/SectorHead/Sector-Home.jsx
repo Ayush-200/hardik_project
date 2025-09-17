@@ -16,7 +16,7 @@ function SectorRequests() {
   const fetchRequests = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("https://civicconnect-backend.onrender.com/api/sector-head/gathering-request", {
+      const res = await axios.get("https://hardik-project-backend-n2av.onrender.com/api/sector-head/gathering-request", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setRequests(res.data.requests || []);
@@ -35,7 +35,7 @@ function SectorRequests() {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `https://civicconnect-backend.onrender.com/api/sector-head/gathering/${id}/status`,
+        `https://hardik-project-backend-n2av.onrender.com/api/sector-head/gathering/${id}/status`,
         { status, remarks: status === "approved" ? "Approved ✅" : "Rejected ❌" },
         { headers: { Authorization: `Bearer ${token}` } }
       );
